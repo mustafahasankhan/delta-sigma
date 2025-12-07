@@ -1,0 +1,220 @@
+{
+  "site": {
+    "name": "Pictorial",
+    "tagline": "We turn ideas into visuals that move people",
+    "description": "A creative agency crafting bold brands, stunning visuals, and unforgettable experiences for the modern world.",
+    "logo": {
+      "type": "svg",
+      "svg": "<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64.06 32' fill='currentColor'><rect x='12.31' width='6.78' height='32' stroke-width='0'/><polygon points='0 32 6.78 32 12.31 0 5.53 0 0 32' stroke-width='0'/><rect x='25.88' width='6.78' height='32' stroke-width='0'/><polygon points='32.66 32 39.44 32 44.97 0 38.19 0 32.66 32' stroke-width='0'/><rect x='44.97' width='6.78' height='32' stroke-width='0'/><polygon points='57.28 0 51.75 32 58.53 32 64.06 0 57.28 0' stroke-width='0'/></svg>"
+    },
+    "contact": {
+      "phone": "+91 6299206963",
+      "email": "Pitctorialindiaofficial@gmail.com",
+      "address": "India"
+    },
+    "social": {
+      "instagram": "#",
+      "facebook": "#",
+      "twitter": "#"
+    },
+    "copyright": "Pictorial © All Rights Reserved",
+    "links": {
+      "privacyPolicy": "#",
+      "termsAndConditions": "#"
+    }
+  },
+  "hero": {
+    "title": "We turn ideas into visuals that move people",
+    "highlightWord": "visuals",
+    "subtitle": "A creative agency crafting bold brands, stunning visuals, and unforgettable experiences for the modern world.",
+    "cta": {
+      "text": "See Our Work",
+      "link": "#work"
+    },
+    "secondaryCta": {
+      "text": "Let's Build Something",
+      "link": "#contact"
+    },
+    "rotatingBadges": [
+      {
+        "value": 1500,
+        "label": "Projects Launched"
+      },
+      {
+        "value": 6,
+        "label": "Years of Experience"
+      },
+      {
+        "value": 1000,
+        "label": "Happy Clients"
+      }
+    ]
+  },
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Bold Brand Identity",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Branding", "Creative"],
+      "isLatest": true
+    },
+    {
+      "id": "project-2",
+      "title": "Motion Masterpiece",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Motion Graphics", "Video"]
+    },
+    {
+      "id": "project-3",
+      "title": "Social Media Campaign",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Social Media Creatives", "Creative"]
+    },
+    {
+      "id": "project-4",
+      "title": "Video Production",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Video Editing", "Motion"]
+    },
+    {
+      "id": "project-5",
+      "title": "Logo Design Suite",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Logo Design", "Branding"]
+    }
+  ],
+  "categories": [
+    {
+      "id": "branding",
+      "title": "Branding"
+    },
+    {
+      "id": "motion-graphics",
+      "title": "Motion Graphics"
+    },
+    {
+      "id": "video-editing",
+      "title": "Video Editing"
+    },
+    {
+      "id": "creative",
+      "title": "Creative"
+    },
+    {
+      "id": "logo-design",
+      "title": "Logo Design"
+    },
+    {
+      "id": "social-media-creatives",
+      "title": "Social Media Creatives"
+    }
+  ],
+  "whatWeDo": {
+    "subtitle": "Every project tells a story. From bold branding to scroll-stopping motion graphics, each design is crafted to connect, engage, and leave a mark.",
+    "description": {
+      "title": "We create work that people remember",
+      "text": "At Pictorial, we blend design, storytelling and strategy to create visuals that don't just look good — they perform. With 6+ years of creative journey and over 50 successful projects under our belt, we help brands stand out, communicate clearly and connect emotionally."
+    },
+    "badges": [
+      "1500+ Projects",
+      "6+ Years Experience"
+    ]
+  },
+  "trust": {
+    "heading": "Brands who believe in our creativity"
+  },
+  "team": {
+    "image": "/AW_Team_01-800x600.jpg",
+    "alt": "Our Team"
+  },
+  "partners": {
+    "heading": "Brands who believe in our creativity",
+    "logos": []
+  },
+  "marquee": {
+    "text": "We don't follow designs… We create trends"
+  },
+  "achievements": {
+    "heading": "We stay obsessed with quality & originality",
+    "description": "At Pictorial, we blend design, storytelling and strategy to create visuals that don't just look good — they perform. We stay obsessed with: Quality & originality, Fast turnaround with premium results, Creative ideas that deliver real impact.",
+    "stats": [
+      {
+        "value": 1500,
+        "label": "Projects Launched"
+      },
+      {
+        "value": 6,
+        "label": "Years of Experience"
+      },
+      {
+        "value": 1000,
+        "label": "Happy Clients"
+      }
+    ]
+  },
+  "establishedYear": {
+    "year": 2018,
+    "description": "With 6+ years of creative journey and over 1500 successful projects, we've honed our craft to deliver exceptional results."
+  },
+  "services": [
+    "Branding",
+    "Logo Design",
+    "Motion Graphics",
+    "Video Editing",
+    "Social Media Creatives"
+  ],
+  "servicesCta": {
+    "heading": "Have an idea? Let's turn it into something impactful. Whether you're launching, rebranding, or leveling up — we're ready.",
+    "buttonText": "Start Your Project",
+    "phone": "+91 6299206963"
+  },
+  "testimonials": [
+    {
+      "id": "1",
+      "author": {
+        "name": "HMN Studio",
+        "company": "",
+        "image": ""
+      },
+      "content": "⭐️⭐️⭐️⭐️⭐️ Pictorial transformed our brand look — more engagement everywhere!"
+    },
+    {
+      "id": "2",
+      "author": {
+        "name": "Andrew",
+        "company": "",
+        "image": ""
+      },
+      "content": "⭐️⭐️⭐️⭐️⭐️ Professional, creative, flexible, and quick. The best design experience."
+    },
+    {
+      "id": "3",
+      "author": {
+        "name": "Ejaj",
+        "company": "",
+        "image": ""
+      },
+      "content": "⭐️⭐️⭐️⭐️⭐️ Motion graphics and editing quality is just top-notch!"
+    }
+  ],
+  "footer": {
+    "heading": "Have an idea? Let's turn it into something impactful.",
+    "getInTouchLabel": "Let's Work Together",
+    "followUs": {
+      "title": "Follow Us"
+    },
+    "cta": {
+      "heading": "Start Your Project",
+      "description": "Whether you're launching, rebranding, or leveling up — we're ready.",
+      "buttonText": "Get in touch"
+    },
+    "services": [
+      "Branding",
+      "Motion Graphics",
+      "Video Editing",
+      "Social Media Creatives",
+      "Logo Design"
+    ]
+  }
+}
+
