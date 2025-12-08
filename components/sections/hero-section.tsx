@@ -37,8 +37,8 @@ const AchievementsBadge = () => {
   }, [achievements.length])
 
   return (
-    <div className="relative flex items-center gap-6 text-2xl">
-      <div className="grid size-[72px] place-items-center overflow-hidden rounded-full bg-black text-white">
+    <div className="relative flex items-center gap-3 text-base sm:gap-4 sm:text-lg md:gap-6 md:text-2xl">
+      <div className="grid size-12 place-items-center overflow-hidden rounded-full bg-black text-sm text-white sm:size-16 sm:text-base md:size-[72px] md:text-xl">
         <AnimatePresence mode="wait">
           <motion.span
             key={currentIndex}
@@ -72,8 +72,8 @@ export const HeroSection = () => {
   
   return (
     <section>
-      <div className="container flex min-h-screen flex-col justify-end gap-y-huge py-huge">
-        <div className="max-w-7xl text-huge/tight font-semibold">
+      <div className="container flex min-h-screen flex-col justify-end gap-y-8 py-8 md:gap-y-huge md:py-huge">
+        <div className="max-w-7xl text-4xl font-semibold leading-tight sm:text-5xl md:text-huge md:leading-tight">
           <TextSlideUpByWord
             delay={0.3}
             staggerChildren={0.1}
@@ -85,23 +85,25 @@ export const HeroSection = () => {
             {config.hero.title}
           </TextSlideUpByWord>
         </div>
-        <div className="flex items-center gap-8">
+        <div className="flex flex-col gap-4 md:flex-row md:items-center md:gap-8">
           <BlockSlideUp transition={{ delay: 0.6, duration: 0.3 }}>
             <AchievementsBadge />
           </BlockSlideUp>
-          <BlockSlideUp containerClassName="ms-auto max-w-lg" transition={{ delay: 0.6, duration: 0.3 }}>
-            <p className="text-[28.8px] leading-tight">
+          <BlockSlideUp containerClassName="md:ms-auto md:max-w-lg" transition={{ delay: 0.6, duration: 0.3 }}>
+            <p className="text-base leading-tight sm:text-lg md:text-[28.8px]">
               {config.hero.subtitle}
             </p>
           </BlockSlideUp>
-          <BlockSlideUp transition={{ delay: 0.6, duration: 0.3 }}>
-            <AnimatedLink href={config.hero.cta.link}>{config.hero.cta.text}</AnimatedLink>
-          </BlockSlideUp>
-          {config.hero.secondaryCta && (
-            <BlockSlideUp transition={{ delay: 0.7, duration: 0.3 }}>
-              <AnimatedLink href={config.hero.secondaryCta.link} variant="outline">{config.hero.secondaryCta.text}</AnimatedLink>
+          <div className="flex flex-wrap gap-4">
+            <BlockSlideUp transition={{ delay: 0.6, duration: 0.3 }}>
+              <AnimatedLink href={config.hero.cta.link} className="text-sm sm:text-base md:text-2xl">{config.hero.cta.text}</AnimatedLink>
             </BlockSlideUp>
-          )}
+            {config.hero.secondaryCta && (
+              <BlockSlideUp transition={{ delay: 0.7, duration: 0.3 }}>
+                <AnimatedLink href={config.hero.secondaryCta.link} variant="outline" className="text-sm sm:text-base md:text-2xl">{config.hero.secondaryCta.text}</AnimatedLink>
+              </BlockSlideUp>
+            )}
+          </div>
         </div>
       </div>
     </section>

@@ -3,6 +3,7 @@ import "./globals.css";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { InitialLoader } from "@/components/initial-loader";
+import { ThemeProvider } from "@/components/theme-provider";
 import { getSiteConfig } from "@/lib/config";
 
 const siteConfig = getSiteConfig()
@@ -20,11 +21,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Header />
-        <InitialLoader>
-          <main>{children}</main>
-        </InitialLoader>
-        <Footer />
+        <ThemeProvider>
+          <Header />
+          <InitialLoader>
+            <main>{children}</main>
+          </InitialLoader>
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

@@ -15,8 +15,8 @@ export function Header() {
     <>
       <header
         style={{ ["--translate" as string]: translate }}
-        className="container fixed top-0 z-40 flex h-[100px] translate-y-[calc(var(--translate)_*_-100%)] items-center gap-8 transition-transform duration-700">
-        <Logo className="max-w-16" />
+        className="container fixed top-0 z-40 flex h-16 translate-y-[calc(var(--translate)_*_-100%)] items-center gap-4 transition-transform duration-700 md:h-[100px] md:gap-8">
+        <Logo className="max-w-10 md:max-w-16" />
         <div className="ms-auto">
           <DialogRoot>
             <DialogTrigger asChild>
@@ -28,7 +28,7 @@ export function Header() {
       </header>
       <div
         style={{ ["--translate" as string]: translate }}
-        className="pointer-events-none fixed top-0 z-30 h-[100px] w-full translate-y-[calc(var(--translate)_*_-100%)] transition-transform delay-100 duration-300">
+        className="pointer-events-none fixed top-0 z-30 h-16 w-full translate-y-[calc(var(--translate)_*_-100%)] transition-transform delay-100 duration-300 md:h-[100px]">
         <div className="h-full w-full backdrop-blur-md" />
       </div>
     </>

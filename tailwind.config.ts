@@ -12,7 +12,13 @@ export default {
     extend: {
       container: {
         center: true,
-        padding: "5.625rem",
+        padding: {
+          DEFAULT: "1rem",
+          sm: "2rem",
+          md: "3rem",
+          lg: "4rem",
+          xl: "5.625rem",
+        },
         screens: {
           sm: "100%",
           md: "100%",
@@ -117,7 +123,7 @@ export default {
           fontWeight: "600",
         },
         ".variant-h4": {
-          fontSize: "1.5vw",
+          fontSize: "clamp(1rem, 1.5vw, 1.5vw)",
           lineHeight: "1.4",
           fontWeight: "400",
         },

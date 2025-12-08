@@ -1,4 +1,11 @@
 {
+  "theme": {
+    "colors": {
+      "primary": "22, 91%, 51%",
+      "secondary": "25, 91%, 60%",
+      "accent": "21, 79%, 73%"
+    }
+  },
   "site": {
     "name": "Pictorial",
     "tagline": "We turn ideas into visuals that move people",
