@@ -35,15 +35,15 @@ export function TestimonialsSection() {
           "radial-gradient(circle at -30% 21%,hsl(var(--primary)) 0,transparent 30%),radial-gradient(circle at 120% 80%,hsl(var(--primary)) 0,transparent 30%)",
       }}
       className="relative min-h-screen bg-foreground text-background">
-      <div className="container max-w-[84.375vw] py-huge">
+      <div className="container py-8 md:max-w-[84.375vw] md:py-huge">
         <Heading />
-        <div ref={target} className="relative mt-8 space-y-12">
+        <div ref={target} className="relative mt-6 space-y-6 md:mt-8 md:space-y-12">
           {testimonials.map((testimonial) => (
             <TestimonialComponent key={testimonial.id} {...testimonial} />
           ))}
         </div>
       </div>
-      <div className="pointer-events-none absolute inset-0 z-10">
+      <div className="pointer-events-none absolute inset-0 z-10 hidden md:block">
         <div className="container relative flex h-full justify-end pb-[16rem] pt-[30rem]">
           <div className="sticky right-0 top-1/2 h-max -translate-y-1/2">
             <ProgressBar progress={scrollYProgress} />
@@ -91,19 +91,19 @@ function TestimonialComponent({ id, author: { name, company, image }, content }:
     <motion.div
       ref={target}
       style={{ ["--progress" as string]: scrollYProgress }}
-      className="scale-[calc(0.8_+_(var(--progress)_*_0.2))] rounded-[32px] bg-transparent p-[4vw] text-background ring-1 ring-[#fff3]">
-      <div className="mb-8 mt-10">
-        <p className="variant-h2 text-[2vw]">"{content}"</p>
+      className="scale-[calc(0.95_+_(var(--progress)_*_0.05))] rounded-2xl bg-transparent p-4 text-background ring-1 ring-[#fff3] md:scale-[calc(0.8_+_(var(--progress)_*_0.2))] md:rounded-[32px] md:p-[4vw]">
+      <div className="mb-4 mt-4 md:mb-8 md:mt-10">
+        <p className="text-lg font-semibold leading-snug sm:text-xl md:text-2xl lg:text-[2vw]">"{content}"</p>
       </div>
-      <div className="flex items-center justify-between gap-4">
-        <div className="flex items-center gap-8">
-          <Avatar className="variant-h5">
+      <div className="flex flex-col gap-3 md:flex-row md:items-center md:justify-between md:gap-4">
+        <div className="flex items-center gap-4 md:gap-8">
+          <Avatar className="size-12 md:size-16">
             <AvatarImage src={image} />
             <AvatarFallback>{name.charAt(0)}</AvatarFallback>
           </Avatar>
-          <h5 className="variant-h5 text-muted">{name}</h5>
+          <h5 className="text-sm text-muted md:text-base lg:text-lg">{name}</h5>
         </div>
-        <h4 className="variant-h4 text-primary">{company}</h4>
+        {company && <h4 className="text-sm text-primary md:text-base lg:text-lg">{company}</h4>}
       </div>
     </motion.div>
   )

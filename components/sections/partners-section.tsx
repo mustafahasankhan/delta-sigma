@@ -8,7 +8,7 @@ export function PartnersSection() {
   
   return (
     <section>
-      <div className="container py-huge">
+      <div className="container py-8 md:py-huge">
         <TextSlideUpByWord as="h2" className="variant-h2 max-w-screen-xl">
           {config.partners.heading}
         </TextSlideUpByWord>

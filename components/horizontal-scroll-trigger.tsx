@@ -12,6 +12,7 @@ export const HorizontalScrollTrigger = ({ children, className }: { children: Rea
   const [containerWidth, setContainerWidth] = useState(0)
   const { scrollYProgress } = useScroll({
     target: container,
+    offset: ["start start", "end end"]
   })
   const yProgress = useSpring(scrollYProgress, { mass: 0.2 })
   useEffect(() => {

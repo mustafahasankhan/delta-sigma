@@ -21,12 +21,12 @@ export default function Page() {
       <WhatWeDoSection />
       <TrustSection />
       <section>
-        <div className="container">
-          <ParallaxImage className="aspect-[1.75176]" src={config.team.image} alt={config.team.alt} />
+        <div className="container py-4 md:py-0">
+          <ParallaxImage className="aspect-video md:aspect-[1.75176]" src={config.team.image} alt={config.team.alt} />
         </div>
       </section>
       <PartnersSection />
-      <ScrollMarquee className="whitespace-nowrap px-[50dvw] py-huge text-[9.375vw] font-semibold leading-tight">
+      <ScrollMarquee className="whitespace-nowrap px-[20vw] py-8 text-[12vw] font-semibold leading-tight sm:px-[30vw] sm:text-[10vw] md:px-[50dvw] md:py-huge md:text-[9.375vw]">
         {config.marquee.text}
       </ScrollMarquee>
       <AchievementsSection />

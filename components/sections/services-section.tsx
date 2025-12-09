@@ -14,16 +14,16 @@ export function ServicesSection() {
   const config = getConfig()
   
   return (
-    <section className="container py-huge">
+    <section className="container py-8 md:py-huge">
       <TextSlideUpByWord as="h2" className="variant-h2">
         We're good at
       </TextSlideUpByWord>
-      <div className="grid grid-cols-[1fr_50.75vw] items-end">
+      <div className="grid grid-cols-1 gap-8 lg:grid-cols-[1fr_50.75vw] lg:items-end">
         <div>
-          <div className="mt-6 space-y-4">
-            <p>Services</p>
+          <div className="mt-4 space-y-2 md:mt-6 md:space-y-4">
+            <p className="text-sm md:text-base">Services</p>
             {config.services.map((item) => (
-              <Link href={`#`} key={item} className="variant-h3 block overflow-hidden text-[2vw]">
+              <Link href={`#`} key={item} className="block overflow-hidden text-xl font-semibold sm:text-2xl md:text-[2vw]">
                 <TextSlideUpByText>{item}</TextSlideUpByText>
               </Link>
             ))}
@@ -39,15 +39,15 @@ export function ServicesSection() {
           <motion.div
             transition={{ delay: 0.9 }}
             variants={{ visible: { opacity: 1 }, hidden: { opacity: 0 } }}
-            className="p-16">
-            <h3 className="variant-h3">
+            className="p-6 md:p-12 lg:p-16">
+            <h3 className="text-xl font-semibold leading-tight sm:text-2xl md:text-3xl">
               {config.servicesCta.heading}
             </h3>
-            <div className="mt-8 flex items-center gap-4">
-              <Button variant="ghost" className="py-4">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center md:mt-8 md:gap-4">
+              <Button variant="ghost" className="w-full sm:w-auto">
                 {config.servicesCta.buttonText}
               </Button>
-              <Badge size="lg" variant="outline" className="border-current py-4">
+              <Badge size="lg" variant="outline" className="border-current py-3 text-sm md:py-4 md:text-base">
                 {config.servicesCta.phone}
               </Badge>
             </div>

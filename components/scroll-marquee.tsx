@@ -45,7 +45,7 @@ export const ScrollMarquee = ({
         style={{
           ["--element-width" as string]: elementWidth,
           ["--progress" as string]: yProgress,
-        }} className={cn("min-w-full w-[calc(100%_-_100dvw)] translate-x-[calc(var(--progress)_*_-100%)]", className)}>
+        }} className={cn("min-w-full w-max translate-x-[calc(var(--progress)_*_-50%)]", className)}>
         {children}
       </motion.div>
     </section>

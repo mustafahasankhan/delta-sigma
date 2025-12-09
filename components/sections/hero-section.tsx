@@ -72,7 +72,7 @@ export const HeroSection = () => {
   
   return (
     <section>
-      <div className="container flex min-h-screen flex-col justify-end gap-y-8 py-8 md:gap-y-huge md:py-huge">
+      <div className="container flex min-h-[80vh] flex-col justify-end gap-y-8 pb-8 pt-20 md:min-h-screen md:gap-y-huge md:pb-huge md:pt-huge">
         <div className="max-w-7xl text-4xl font-semibold leading-tight sm:text-5xl md:text-huge md:leading-tight">
           <TextSlideUpByWord
             delay={0.3}

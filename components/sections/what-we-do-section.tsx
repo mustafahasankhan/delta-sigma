@@ -21,16 +21,16 @@ export function WhatWeDoSection() {
   
   return (
     <section className="bg-[#111111] bg-radialToBr text-primary-foreground">
-      <div className="container py-[7.5vw]">
-        <TextSlideUpByWord as="h5" className="variant-h5 mb-4 overflow-y-hidden">
+      <div className="container py-8 md:py-[7.5vw]">
+        <TextSlideUpByWord as="h5" className="mb-4 overflow-y-hidden text-lg md:text-2xl">
           {config.whatWeDo.subtitle}
         </TextSlideUpByWord>
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {categoriesWithProjects.map((category) => (
             <motion.a
               key={category.id}
               href={`#`}
-              className="flex items-center justify-between gap-4 overflow-hidden"
+              className="flex items-center justify-between gap-2 overflow-hidden md:gap-4"
               initial="initial"
               whileHover="hovered">
               <motion.h2
@@ -38,7 +38,7 @@ export function WhatWeDoSection() {
                   initial: { scale: 1, transition: { duration: 0.3 } },
                   hovered: { scale: 0.95, transition: { duration: 0.3 } },
                 }}
-                className="variant-h2 origin-left">
+                className="origin-left text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
                 <TextSlideUpByLine>{category.title}</TextSlideUpByLine>
               </motion.h2>
               <motion.div
@@ -46,12 +46,12 @@ export function WhatWeDoSection() {
                   initial: { opacity: 0, x: -12, transition: { duration: 0.3 } },
                   hovered: { opacity: 1, x: 0, transition: { duration: 0.3 } },
                 }}
-                className="flex items-center gap-6">
-                <div>
-                  <p className="variant-p text-muted">Latest Case Study</p>
-                  <h5 className="variant-h5">{category.topProject?.title}</h5>
+                className="hidden items-center gap-3 md:flex md:gap-6">
+                <div className="hidden lg:block">
+                  <p className="text-sm text-muted">Latest Case Study</p>
+                  <h5 className="text-base md:text-lg">{category.topProject?.title}</h5>
                 </div>
-                <div className="relative size-[72px] overflow-clip rounded-full bg-muted">
+                <div className="relative size-12 overflow-clip rounded-full bg-muted md:size-16 lg:size-[72px]">
                   <Image
                     src={category.topProject?.image || "/project-placeholder-image.jpg"}
                     alt={category.topProject?.title || ""}
@@ -60,8 +60,7 @@ export function WhatWeDoSection() {
                   />
                 </div>
                 <svg
-                  width="48.7295674px"
-                  height="34.7295396px"
+                  className="h-6 w-8 md:h-8 md:w-12"
                   viewBox="0 0 48.7295674 34.7295396"
                   version="1.1"
                   xmlns="http://www.w3.org/2000/svg">
@@ -79,21 +78,21 @@ export function WhatWeDoSection() {
             </motion.a>
           ))}
         </div>
-        <div className="my-[4rem] h-[1px] w-full bg-[#fff3]"></div>
-        <div className="flex items-end justify-between">
+        <div className="my-8 h-[1px] w-full bg-[#fff3] md:my-[4rem]"></div>
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-xl">
             <TextSlideUpByLine
               as="h2"
-              className="variant-h2 mb-8 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              className="mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-2xl font-semibold text-transparent sm:text-3xl md:mb-8 md:text-4xl lg:text-5xl">
               {config.whatWeDo.description.title}
             </TextSlideUpByLine>
-            <h5 className="variant-h5">
+            <h5 className="text-base leading-relaxed md:text-lg">
               {config.whatWeDo.description.text}
             </h5>
           </div>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-3 md:gap-4">
             {config.whatWeDo.badges.map((badge) => (
-              <Badge key={badge} size="lg" variant="outline" className="border-primary">
+              <Badge key={badge} size="lg" variant="outline" className="border-primary text-sm md:text-base">
                 {badge}
               </Badge>
             ))}
