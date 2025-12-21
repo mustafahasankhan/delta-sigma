@@ -290,20 +290,23 @@ export function TextAnimate({
       }
     : { container: defaultContainerVariants, item: defaultItemVariants }
 
+  // Ensure children is always a string
+  const textContent = typeof children === 'string' ? children : String(children || '')
+
   let segments: string[] = []
   switch (by) {
     case "word":
-      segments = children.split(/(\s+)/)
+      segments = textContent.split(/(\s+)/)
       break
     case "character":
-      segments = children.split("")
+      segments = textContent.split("")
       break
     case "line":
-      segments = children.split("\n")
+      segments = textContent.split("\n")
       break
     case "text":
     default:
-      segments = [children]
+      segments = [textContent]
       break
   }
 

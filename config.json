@@ -62,58 +62,70 @@
       "id": "project-1",
       "title": "Bold Brand Identity",
       "image": "/project-placeholder-image.jpg",
-      "categories": ["Branding", "Creative"],
-      "isLatest": true
+      "categories": ["Brand Identity"],
+      "isLatest": true,
+      "fileType": "image"
     },
     {
       "id": "project-2",
       "title": "Motion Masterpiece",
       "image": "/project-placeholder-image.jpg",
-      "categories": ["Motion Graphics", "Video"]
+      "categories": ["Motion Graphics"],
+      "fileType": "video"
     },
     {
       "id": "project-3",
       "title": "Social Media Campaign",
       "image": "/project-placeholder-image.jpg",
-      "categories": ["Social Media Creatives", "Creative"]
+      "categories": ["Social Media Creatives"],
+      "fileType": "image"
     },
     {
       "id": "project-4",
       "title": "Video Production",
       "image": "/project-placeholder-image.jpg",
-      "categories": ["Video Editing", "Motion"]
+      "categories": ["Video Editing"],
+      "fileType": "video"
     },
     {
       "id": "project-5",
       "title": "Logo Design Suite",
       "image": "/project-placeholder-image.jpg",
-      "categories": ["Logo Design", "Branding"]
+      "categories": ["Logo Design"],
+      "fileType": "image"
+    },
+    {
+      "id": "project-6",
+      "title": "Packaging Design",
+      "image": "/project-placeholder-image.jpg",
+      "categories": ["Packaging Design"],
+      "fileType": "image"
     }
   ],
   "categories": [
     {
-      "id": "branding",
-      "title": "Branding"
+      "id": "logo-design",
+      "title": "Logo Design"
+    },
+    {
+      "id": "brand-identity",
+      "title": "Brand Identity"
+    },
+    {
+      "id": "packaging-design",
+      "title": "Packaging Design"
     },
     {
       "id": "motion-graphics",
       "title": "Motion Graphics"
     },
     {
-      "id": "video-editing",
-      "title": "Video Editing"
-    },
-    {
-      "id": "creative",
-      "title": "Creative"
-    },
-    {
-      "id": "logo-design",
-      "title": "Logo Design"
-    },
-    {
       "id": "social-media-creatives",
       "title": "Social Media Creatives"
+    },
+    {
+      "id": "video-editing",
+      "title": "Video Editing"
     }
   ],
   "whatWeDo": {
@@ -164,11 +176,12 @@
     "description": "With 6+ years of creative journey and over 1500 successful projects, we've honed our craft to deliver exceptional results."
   },
   "services": [
-    "Branding",
-    "Logo Design",
-    "Motion Graphics",
+    "Brand Identity",
+    "Scroll-Stopping Motion Graphics",
     "Video Editing",
-    "Social Media Creatives"
+    "Social-First Visuals",
+    "Logo Design",
+    "Packaging Design"
   ],
   "servicesCta": {
     "heading": "Have an idea? Let's turn it into something impactful. Whether you're launching, rebranding, or leveling up — we're ready.",
@@ -205,23 +218,177 @@
     }
   ],
   "footer": {
-    "heading": "Have an idea? Let's turn it into something impactful.",
-    "getInTouchLabel": "Let's Work Together",
+    "heading": "Design it once. Design it right.",
+    "getInTouchLabel": "Let's Talk",
     "followUs": {
       "title": "Follow Us"
     },
     "cta": {
       "heading": "Start Your Project",
       "description": "Whether you're launching, rebranding, or leveling up — we're ready.",
-      "buttonText": "Get in touch"
+      "buttonText": "Let's Talk"
     },
     "services": [
-      "Branding",
-      "Motion Graphics",
+      "Brand Identity",
+      "Scroll-Stopping Motion Graphics",
       "Video Editing",
-      "Social Media Creatives",
-      "Logo Design"
+      "Social-First Visuals",
+      "Logo Design",
+      "Packaging Design"
     ]
+  },
+  "about": {
+    "hero": {
+      "title": "Visuals That Build Brands.",
+      "subtitle": "PICTORIAL is a creative branding agency focused on crafting strong visual identities for modern brands.",
+      "description": "We help businesses stand out in a crowded digital world through impactful design, motion, and storytelling.",
+      "tagline": "For us, design is not decoration —",
+      "taglineDescription": "It's a strategic tool to create recognition, trust, and connection."
+    },
+    "whoWeAre": {
+      "title": "Who We Are",
+      "description": "We are a team of designers, motion artists, and visual storytellers driven by creativity and clarity.",
+      "text": "At PICTORIAL, we work closely with brands to understand their vision, audience, and goals — and translate them into visuals that feel bold, consistent, and memorable.",
+      "closing": "Every project we take on is built with intention, precision, and purpose."
+    },
+    "whatWeDo": {
+      "title": "What We Do",
+      "subtitle": "We specialize in creating visuals that connect with people and elevate brands:",
+      "services": [
+        {
+          "title": "Brand Identity",
+          "description": "Visual systems that define your brand's personality"
+        },
+        {
+          "title": "Motion Graphics",
+          "description": "Scroll-stopping motion designed for attention"
+        },
+        {
+          "title": "Video Editing",
+          "description": "Clean, cinematic edits that tell stories"
+        },
+        {
+          "title": "Social-First Visuals",
+          "description": "Designs made to engage and connect"
+        },
+        {
+          "title": "Logo Design",
+          "description": "Distinctive logos built for recognition"
+        },
+        {
+          "title": "Packaging Design",
+          "description": "Packaging that enhances the product experience"
+        }
+      ]
+    },
+    "approach": {
+      "title": "Our Approach",
+      "subtitle": "We believe strong visuals come from clear thinking.",
+      "description": "Our process is simple and effective:",
+      "process": "Understand → Design → Refine → Deliver",
+      "focus": "We focus on clarity, consistency, and impact — ensuring every visual aligns with the brand's voice and purpose."
+    },
+    "whyPictorial": {
+      "title": "Why PICTORIAL",
+      "points": [
+        "Creative-first mindset",
+        "Strong focus on visual storytelling",
+        "Clean, modern, and bold aesthetics",
+        "Attention to detail and quality",
+        "Clear communication and reliable delivery"
+      ],
+      "closing": "We don't just create visuals — We help brands look confident, memorable, and future-ready."
+    },
+    "cta": {
+      "title": "Let's Create Something Pictorial",
+      "description": "If you're looking to build a brand that stands out visually and connects emotionally, PICTORIAL is ready to bring your vision to life.",
+      "closing": "Let's create visuals that leave an impression."
+    }
+  },
+  "servicesDetailed": [
+    {
+      "id": "brand-identity",
+      "title": "Brand Identity",
+      "description": "Your brand is more than visuals — it's how people recognize, remember, and trust you.",
+      "subtitle": "We create complete brand identities that feel intentional, consistent, and visually powerful, helping your brand communicate clearly across every touchpoint.",
+      "features": [
+        "Brand discovery & research",
+        "Visual direction & moodboarding",
+        "Identity system design",
+        "Refinement & consistency checks",
+        "Final brand assets delivery"
+      ]
+    },
+    {
+      "id": "motion-graphics",
+      "title": "Scroll-Stopping Motion Graphics",
+      "description": "In a world full of content, attention is everything.",
+      "subtitle": "Our motion graphics are designed to instantly pause the scroll, communicate your message within seconds, and elevate your brand's visual presence across digital platforms.",
+      "features": [
+        "Concept & message planning",
+        "Storyboard & motion direction",
+        "Animation & motion design",
+        "Timing, sound & refinement",
+        "Platform-ready delivery"
+      ]
+    },
+    {
+      "id": "video-editing",
+      "title": "Video Editing",
+      "description": "Great videos don't just play — they connect.",
+      "subtitle": "We turn raw footage into cinematic, story-driven edits that engage viewers, enhance brand storytelling, and create lasting visual impact.",
+      "features": [
+        "Footage review & story planning",
+        "Rough cut & structure",
+        "Visual flow & transitions",
+        "Sound, pacing & final polish",
+        "Multi-platform export"
+      ]
+    },
+    {
+      "id": "social-media-creatives",
+      "title": "Social-First Visual Storytelling",
+      "description": "Social media is about connection, not just presence.",
+      "subtitle": "We design social-first visuals that feel native to platforms, reflect your brand personality, and encourage engagement while keeping your feed visually consistent.",
+      "features": [
+        "Audience & content understanding",
+        "Creative direction & style setup",
+        "Visual design creation",
+        "Brand alignment & refinement",
+        "Ready-to-post delivery"
+      ]
+    },
+    {
+      "id": "logo-design",
+      "title": "Logo Design",
+      "description": "A logo is the most recognizable element of your brand.",
+      "subtitle": "We design distinctive, meaningful logos that are built to last, work across all platforms, and represent your brand with clarity and confidence.",
+      "features": [
+        "Brand understanding & research",
+        "Concept exploration",
+        "Logo design development",
+        "Refinement & final selection",
+        "Brand-ready logo files"
+      ]
+    },
+    {
+      "id": "packaging-design",
+      "title": "Packaging Design",
+      "description": "Packaging is your brand's first physical interaction with customers.",
+      "subtitle": "We create packaging designs that attract attention, communicate quality, and elevate the overall product experience from shelf to unboxing.",
+      "features": [
+        "Product & market research",
+        "Concept & layout planning",
+        "Design development",
+        "Print-ready refinement",
+        "Final packaging assets"
+      ]
+    }
+  ],
+  "contact": {
+    "title": "Let's Build Something Visual & Impactful",
+    "subtitle": "Have a brand that needs to stand out?",
+    "description": "Whether it's a scroll-stopping motion graphic, an unforgettable logo, or a full brand identity — we're here to turn your ideas into visuals that connect and convert."
   }
 }
 

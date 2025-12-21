@@ -100,18 +100,23 @@ function DialogContentCore(
 
                     <div className="p-[--padding]">
                       <div className="my-[calc(16px_+_24*(100vw_-_576px)/1024)] space-y-4">
-                        {["Case Studies", "Our Agency", "Contact Us", "News"].map((menu, i) => (
+                        {[
+                          { label: "Work", href: "/work" },
+                          { label: "About", href: "/about" },
+                          { label: "Services", href: "/#services" },
+                          { label: "Contact", href: "/contact" },
+                        ].map((menu, i) => (
                           <motion.div
                             whileInView={{ opacity: 1 }}
                             transition={{ delay: i * 0.2, duration: 0.2 }}
                             viewport={{ once: false }}
                             style={{ opacity: 0 }}
-                            key={menu}
+                            key={menu.label}
                             className="flex items-center gap-4">
                             <AnimatedLink
-                              href={`#`}
+                              href={menu.href}
                               className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
-                              {menu}
+                              {menu.label}
                             </AnimatedLink>
                           </motion.div>
                         ))}

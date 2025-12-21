@@ -1,22 +1,24 @@
 "use client"
 
+import Link from "next/link"
+import Image from "next/image"
 import { cn } from "@/lib/utils"
 import useDetectScroll from "@smakss/react-scroll-direction"
 import { BurgerMenuBtn } from "./ui/burger-menu-btn"
 import { DialogContent, DialogRoot, DialogTrigger } from "./dialog-menu"
-import { getSiteConfig } from "@/lib/config"
 
 export function Header() {
   const { scrollDir, scrollPosition } = useDetectScroll()
   const translate = scrollPosition.top === 0 ? 0 : scrollDir === "up" ? 0 : 1
-  const siteConfig = getSiteConfig()
   
   return (
     <>
       <header
         style={{ ["--translate" as string]: translate }}
         className="container fixed top-0 z-40 flex h-16 translate-y-[calc(var(--translate)_*_-100%)] items-center gap-4 transition-transform duration-700 md:h-[100px] md:gap-8">
-        <Logo className="max-w-10 md:max-w-16" />
+        <Link href="/" className="block">
+          <Logo className="max-w-24 md:max-w-32" />
+        </Link>
         <div className="ms-auto">
           <DialogRoot>
             <DialogTrigger asChild>
@@ -35,15 +37,18 @@ export function Header() {
   )
 }
 
-export function Logo({ className, svg }: { className?: string; svg?: string }) {
-  const siteConfig = getSiteConfig()
-  const logoSvg = svg || siteConfig.logo.svg
-  
+export function Logo({ className }: { className?: string }) {
   return (
-    <div
-      className={cn("flex items-center [&_svg]:h-auto [&_svg]:w-full", className)}
-      dangerouslySetInnerHTML={{ __html: logoSvg }}
-    />
+    <div className={cn("relative flex items-center", className)}>
+      <Image
+        src="/logos/logo.svg"
+        alt="PICTORIAL"
+        width={200}
+        height={125}
+        className="h-auto w-full object-contain"
+        priority
+      />
+    </div>
   )
 }
 

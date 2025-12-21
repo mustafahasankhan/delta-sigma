@@ -1,88 +1,134 @@
 import Link from "next/link"
-import { AnimatedButton as Button } from "./ui/animated-button"
-import { Card } from "./ui/card"
-import { Facebook, Instagram, Twitter } from "lucide-react"
+import { AnimatedLink } from "./ui/animated-button"
 import { getSiteConfig, getConfig } from "@/lib/config"
+import { Instagram, Linkedin, Twitter, Mail } from "lucide-react"
 
 export function Footer() {
   const siteConfig = getSiteConfig()
   const config = getConfig()
   
   return (
-    <section>
-      <div className="container py-8 md:py-huge">
+    <footer className="border-t border-border">
+      <div className="container py-8 md:py-12">
         <div className="flex flex-col gap-8 md:flex-row md:items-start md:justify-between">
-          <div className="space-y-4 md:space-y-8">
-            <h3 className="text-2xl font-semibold leading-tight sm:text-3xl md:max-w-[47.917vw] md:text-[2.778vw]">
+          {/* Left Section */}
+          <div className="space-y-6 md:space-y-8">
+            <h3 className="variant-h2 font-semibold">
               {config.footer.heading}
             </h3>
-            <div className="space-y-2 md:space-y-4">
-              <p className="text-sm md:text-base">{config.footer.getInTouchLabel}</p>
-              <a className="block text-base font-semibold md:text-lg" href={`tel:${siteConfig.contact.phone}`}>
-                {siteConfig.contact.phone}
-              </a>
-              <a className="block text-base font-semibold md:text-lg" href={`mailto:${siteConfig.contact.email}`}>
-                {siteConfig.contact.email}
-              </a>
-              <p className="text-base font-semibold md:text-lg">{siteConfig.contact.address}</p>
+            <div className="space-y-4">
+              <AnimatedLink href="/contact" variant="outline" size="sm">
+                {config.footer.getInTouchLabel}
+              </AnimatedLink>
+              <div className="space-y-2">
+                <p className="variant-small text-muted-foreground">New Business :</p>
+                <a 
+                  className="block variant-p font-semibold hover:text-primary transition-colors" 
+                  href={`mailto:${siteConfig.contact.email}`}
+                >
+                  {siteConfig.contact.email}
+                </a>
+              </div>
             </div>
           </div>
-          <div className="flex w-full flex-col gap-6 md:w-[40%] md:max-w-[27.938vw] md:gap-10">
-            <Card className="flex items-center gap-4 bg-foreground text-background md:gap-6">
-              <h5 className="me-auto text-base md:text-xl">{config.footer.followUs.title}</h5>
-              {siteConfig.social.instagram && (
-                <Link
-                  href={siteConfig.social.instagram}
-                  target="_blank"
-                  className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
-                  <Instagram size={20} className="md:size-6" />
-                </Link>
-              )}
-              {siteConfig.social.facebook && (
-                <Link
-                  href={siteConfig.social.facebook}
-                  target="_blank"
-                  className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
-                  <Facebook size={20} className="md:size-6" />
-                </Link>
-              )}
-              {siteConfig.social.twitter && (
-                <Link
-                  href={siteConfig.social.twitter}
-                  target="_blank"
-                  className="block rounded-full ring-0 ring-transparent ring-offset-0 ring-offset-foreground transition-all duration-300 hover:scale-125 hover:ring-2 hover:ring-primary hover:ring-offset-8">
-                  <Twitter size={20} className="md:size-6" />
-                </Link>
-              )}
-            </Card>
-            <Card className="flex flex-col items-center gap-3 md:gap-4">
-              <h3 className="text-xl font-semibold md:text-2xl">{config.footer.cta.heading}</h3>
-              <p className="text-center text-sm md:text-base">{config.footer.cta.description}</p>
-              <Button className="mt-4 w-full md:mt-6" size="sm">
-                {config.footer.cta.buttonText}
-              </Button>
-            </Card>
+
+          {/* Right Section - Navigation & Social */}
+          <div className="flex flex-col gap-8 md:gap-12">
+            {/* Navigation Links */}
+            <nav>
+              <ul className="flex flex-col gap-4 md:gap-6">
+                <li>
+                  <Link href="/work" className="variant-p hover:text-primary transition-colors">
+                    Work
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/about" className="variant-p hover:text-primary transition-colors">
+                    About
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#services" className="variant-p hover:text-primary transition-colors">
+                    Services
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="variant-p hover:text-primary transition-colors">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+
+            {/* Social Links */}
+            <div>
+              <ul className="flex flex-col gap-4 md:gap-6">
+                {siteConfig.social.instagram && siteConfig.social.instagram !== "#" && (
+                  <li>
+                    <Link
+                      href={siteConfig.social.instagram}
+                      target="_blank"
+                      className="variant-p hover:text-primary transition-colors"
+                    >
+                      Instagram
+                    </Link>
+                  </li>
+                )}
+                {siteConfig.social.facebook && siteConfig.social.facebook !== "#" && (
+                  <li>
+                    <Link
+                      href={siteConfig.social.facebook}
+                      target="_blank"
+                      className="variant-p hover:text-primary transition-colors"
+                    >
+                      Linkedin
+                    </Link>
+                  </li>
+                )}
+                {siteConfig.social.twitter && siteConfig.social.twitter !== "#" && (
+                  <li>
+                    <Link
+                      href={siteConfig.social.twitter}
+                      target="_blank"
+                      className="variant-p hover:text-primary transition-colors"
+                    >
+                      Twitter
+                    </Link>
+                  </li>
+                )}
+                <li>
+                  <Link
+                    href={`mailto:${siteConfig.contact.email}`}
+                    className="variant-p hover:text-primary transition-colors"
+                  >
+                    Email
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div className="mt-8 flex flex-col gap-4 md:mt-12 md:flex-row md:items-center md:gap-8">
-          <Link className="block text-sm text-muted md:me-auto md:pt-8 md:text-base" href="#">
+
+        {/* Bottom Section */}
+        <div className="mt-8 pt-8 border-t border-border flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+          <p className="variant-small text-muted-foreground">
             {siteConfig.copyright}
-          </Link>
+          </p>
           <div className="flex flex-wrap gap-4 md:gap-8">
-            {siteConfig.links.privacyPolicy && (
-              <Link className="block text-sm text-muted md:text-base" href={siteConfig.links.privacyPolicy}>
+            {siteConfig.links.privacyPolicy && siteConfig.links.privacyPolicy !== "#" && (
+              <Link className="variant-small text-muted-foreground hover:text-foreground transition-colors" href={siteConfig.links.privacyPolicy}>
                 Privacy Policy
               </Link>
             )}
-            {siteConfig.links.termsAndConditions && (
-              <Link className="block text-sm text-muted md:text-base" href={siteConfig.links.termsAndConditions}>
+            {siteConfig.links.termsAndConditions && siteConfig.links.termsAndConditions !== "#" && (
+              <Link className="variant-small text-muted-foreground hover:text-foreground transition-colors" href={siteConfig.links.termsAndConditions}>
                 Terms & Conditions
               </Link>
             )}
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 
