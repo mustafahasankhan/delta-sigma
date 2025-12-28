@@ -45,7 +45,7 @@ export default function WorkPage() {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-card">
       {/* Header */}
       <section className="container py-8 md:py-huge">
         <div className="max-w-4xl">
@@ -66,7 +66,7 @@ export default function WorkPage() {
             className={`px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
               selectedCategory === null
                 ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                : "bg-card text-card-foreground hover:bg-muted hover:scale-105"
+                : "bg-background text-foreground hover:bg-muted hover:scale-105"
             }`}
           >
             ALL ({projects.length})
@@ -81,7 +81,7 @@ export default function WorkPage() {
                 className={`px-6 py-3 rounded-full text-sm md:text-base font-semibold transition-all duration-300 ${
                   selectedCategory === category.id
                     ? "bg-primary text-primary-foreground shadow-lg shadow-primary/20"
-                    : "bg-card text-card-foreground hover:bg-muted hover:scale-105"
+                    : "bg-background text-foreground hover:bg-muted hover:scale-105"
                 }`}
               >
                 {category.title.toUpperCase()} ({count})
@@ -100,7 +100,7 @@ export default function WorkPage() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="grid gap-6 md:grid-cols-2 lg:grid-cols-3"
+            className="grid gap-8 md:grid-cols-2 lg:grid-cols-3"
           >
             {filteredProjects.map((project, index) => (
               <motion.div
@@ -112,8 +112,8 @@ export default function WorkPage() {
                 className="group cursor-pointer"
                 onClick={() => handleProjectClick(project)}
               >
-                {/* Image Container */}
-                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-muted">
+                {/* Image Container with white/light background */}
+                <div className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-background shadow-sm">
                   <Image
                     src={project.image}
                     alt={project.title}

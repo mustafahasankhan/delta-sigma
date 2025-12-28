@@ -71,7 +71,7 @@ const Heading = ({ projectCount }: { projectCount: number }) => {
         A selection of our crafted work, built from scratch by our talented in-house team.
       </h4>
       <div className="mt-6 md:mt-auto md:pt-8">
-        <AnimatedLink href="#" variant="outline" className="text-sm md:text-base">
+        <AnimatedLink href="/work" variant="outline" className="text-sm md:text-base">
           Case Studies
         </AnimatedLink>
       </div>
@@ -83,7 +83,7 @@ const Ending = () => {
   return (
     <div className="flex aspect-[1.25] min-w-[70vw] flex-col items-center justify-center gap-4 md:min-w-[32.5625vw] md:gap-5">
       <h2 className="text-2xl font-semibold md:text-4xl lg:variant-h2">View More</h2>
-      <AnimatedLink href="#" variant="outline" className="text-sm md:text-base">
+      <AnimatedLink href="/work" variant="outline" className="text-sm md:text-base">
         Case Studies
       </AnimatedLink>
     </div>

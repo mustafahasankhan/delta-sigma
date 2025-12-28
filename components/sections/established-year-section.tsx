@@ -30,7 +30,7 @@ export function EstablishedYearSection() {
               className="relative max-w-screen-md text-center text-2xl font-semibold leading-normal sm:text-4xl md:text-[5.625vw] md:leading-[1.3]"
               segmentClassName={(segment) =>
                 segment === "experiences"
-                  ? "ms-[7vw] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent"
+                  ? "ms-[7vw] bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent italic font-medium"
                   : ""
               }>
               {`Crafting digital\nexperiences\nsince ${config.establishedYear.year}`}
@@ -41,4 +41,3 @@ export function EstablishedYearSection() {
     </section>
   )
 }
-

@@ -1,6 +1,7 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { TextSlideUpByLine, TextSlideUpByWord } from "@/components/animate-wrappers"
 import { Badge } from "@/components/ui/badge"
 import { motion } from "framer-motion"
@@ -27,55 +28,59 @@ export function WhatWeDoSection() {
         </TextSlideUpByWord>
         <div className="space-y-3 md:space-y-4">
           {categoriesWithProjects.map((category) => (
-            <motion.a
+            <Link
               key={category.id}
-              href={`#`}
-              className="flex items-center justify-between gap-2 overflow-hidden md:gap-4"
-              initial="initial"
-              whileHover="hovered">
-              <motion.h2
-                variants={{
-                  initial: { scale: 1, transition: { duration: 0.3 } },
-                  hovered: { scale: 0.95, transition: { duration: 0.3 } },
-                }}
-                className="origin-left text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
-                <TextSlideUpByLine>{category.title}</TextSlideUpByLine>
-              </motion.h2>
+              href="/services"
+            >
               <motion.div
-                variants={{
-                  initial: { opacity: 0, x: -12, transition: { duration: 0.3 } },
-                  hovered: { opacity: 1, x: 0, transition: { duration: 0.3 } },
-                }}
-                className="hidden items-center gap-3 md:flex md:gap-6">
-                <div className="hidden lg:block">
-                  <p className="text-sm text-muted">Latest Case Study</p>
-                  <h5 className="text-base md:text-lg">{category.topProject?.title}</h5>
-                </div>
-                <div className="relative size-12 overflow-clip rounded-full bg-muted md:size-16 lg:size-[72px]">
-                  <Image
-                    src={category.topProject?.image || "/project-placeholder-image.jpg"}
-                    alt={category.topProject?.title || ""}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <svg
-                  className="h-6 w-8 md:h-8 md:w-12"
-                  viewBox="0 0 48.7295674 34.7295396"
-                  version="1.1"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
-                    <g transform="translate(-1371, -22.6352)" fill="#FFFFFF" fillRule="nonzero">
-                      <g transform="translate(1051, 4)">
-                        <path
-                          d="M351.286293,18.6352302 L367.358628,34.6352302 L368.729567,36 L367.358628,37.3647698 L351.286293,53.3647698 L348.569038,50.6352302 L361.334,37.9252302 L320,37.9257376 L320,34.0742624 L361.337,34.0742302 L348.569038,21.3647698 L351.286293,18.6352302 Z"
-                        />
+                className="flex items-center justify-between gap-2 overflow-hidden md:gap-4"
+                initial="initial"
+                whileHover="hovered"
+              >
+                <motion.h2
+                  variants={{
+                    initial: { scale: 1, transition: { duration: 0.3 } },
+                    hovered: { scale: 0.95, transition: { duration: 0.3 } },
+                  }}
+                  className="origin-left text-2xl font-semibold sm:text-3xl md:text-4xl lg:text-5xl">
+                  <TextSlideUpByLine>{category.title}</TextSlideUpByLine>
+                </motion.h2>
+                <motion.div
+                  variants={{
+                    initial: { opacity: 0, x: -12, transition: { duration: 0.3 } },
+                    hovered: { opacity: 1, x: 0, transition: { duration: 0.3 } },
+                  }}
+                  className="hidden items-center gap-3 md:flex md:gap-6">
+                  <div className="hidden lg:block">
+                    <p className="text-sm text-muted">Latest Case Study</p>
+                    <h5 className="text-base md:text-lg">{category.topProject?.title}</h5>
+                  </div>
+                  <div className="relative size-12 overflow-clip rounded-full bg-muted md:size-16 lg:size-[72px]">
+                    <Image
+                      src={category.topProject?.image || "/project-placeholder-image.jpg"}
+                      alt={category.topProject?.title || ""}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <svg
+                    className="h-6 w-8 md:h-8 md:w-12"
+                    viewBox="0 0 48.7295674 34.7295396"
+                    version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g stroke="none" strokeWidth="1" fill="none" fillRule="evenodd">
+                      <g transform="translate(-1371, -22.6352)" fill="#FFFFFF" fillRule="nonzero">
+                        <g transform="translate(1051, 4)">
+                          <path
+                            d="M351.286293,18.6352302 L367.358628,34.6352302 L368.729567,36 L367.358628,37.3647698 L351.286293,53.3647698 L348.569038,50.6352302 L361.334,37.9252302 L320,37.9257376 L320,34.0742624 L361.337,34.0742302 L348.569038,21.3647698 L351.286293,18.6352302 Z"
+                          />
+                        </g>
                       </g>
                     </g>
-                  </g>
-                </svg>
+                  </svg>
+                </motion.div>
               </motion.div>
-            </motion.a>
+            </Link>
           ))}
         </div>
         <div className="my-8 h-[1px] w-full bg-[#fff3] md:my-[4rem]"></div>

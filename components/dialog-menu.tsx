@@ -127,9 +127,8 @@ function DialogContentCore(
                           <p className="block w-full text-muted">Follow Us</p>
                           {[
                             { href: siteConfig.social.instagram, label: "Instagram" },
-                            { href: siteConfig.social.facebook, label: "Facebook" },
-                            { href: siteConfig.social.twitter, label: "Twitter" },
-                          ].filter(s => s.href !== "#").map(({ href, label }, i) => (
+                            { href: (siteConfig.social as Record<string, string>).linkedin, label: "LinkedIn" },
+                          ].filter(s => s.href && s.href !== "#").map(({ href, label }, i) => (
                             <div key={label} className="overflow-hidden">
                               <motion.div
                                 whileInView={{ translateY: "0%" }}
@@ -138,6 +137,7 @@ function DialogContentCore(
                                 style={{ translateY: "100%" }}>
                                 <Link
                                   href={href}
+                                  target="_blank"
                                   className="relative before:absolute before:right-0 before:top-0 before:size-1 before:translate-y-2 before:border-r-[1.5px] before:border-t-[1.5px] before:border-background before:opacity-0 before:transition-all before:content-[''] hover:before:translate-x-2 hover:before:translate-y-0 hover:before:opacity-100">
                                   {label}
                                 </Link>

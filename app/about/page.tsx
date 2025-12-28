@@ -86,7 +86,7 @@ export default function AboutPage() {
             </motion.p>
 
             {/* Tagline Card */}
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
@@ -96,7 +96,7 @@ export default function AboutPage() {
                 "{about.hero.tagline}"
               </p>
               <p className="text-muted-foreground mt-2">{about.hero.taglineDescription}</p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </section>
@@ -200,10 +200,6 @@ export default function AboutPage() {
             transition={{ duration: 0.6 }}
             className="text-center mb-16"
           >
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-medium mb-6">
-              <Sparkles className="w-4 h-4" />
-              Our Services
-            </div>
             <h2 className="variant-h2 mb-4">{about.whatWeDo.title}</h2>
             <p className="variant-p text-muted-foreground max-w-2xl mx-auto">
               {about.whatWeDo.subtitle}

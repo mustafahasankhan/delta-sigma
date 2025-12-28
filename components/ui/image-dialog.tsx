@@ -16,11 +16,6 @@ const dialogVariants = {
   open: { opacity: 1, scale: 1 },
 }
 
-// VisuallyHidden component for accessibility
-const VisuallyHidden = ({ children }: { children: React.ReactNode }) => (
-  <span className="sr-only">{children}</span>
-)
-
 export function ImageDialog({
   open,
   onOpenChange,
@@ -50,8 +45,8 @@ export function ImageDialog({
               >
                 <RadixDialog.Content
                   asChild
-                  className="fixed left-1/2 top-1/2 z-[1000] -translate-x-1/2 -translate-y-1/2"
                   onClick={(e) => e.stopPropagation()}
+                  aria-describedby={undefined}
                 >
                   <motion.div
                     variants={dialogVariants}
@@ -60,13 +55,13 @@ export function ImageDialog({
                     exit="closed"
                     className={cn("relative", className)}
                   >
-                    <RadixDialog.Title asChild>
-                      <VisuallyHidden>{title || "Project Image"}</VisuallyHidden>
+                    <RadixDialog.Title className="sr-only">
+                      {title || "Project Image"}
                     </RadixDialog.Title>
                     {children}
                     <RadixDialog.Close className="absolute right-4 top-4 rounded-full bg-background/80 backdrop-blur-sm p-2 hover:bg-background transition-colors z-10">
                       <X className="w-6 h-6" />
-                      <VisuallyHidden>Close</VisuallyHidden>
+                      <span className="sr-only">Close</span>
                     </RadixDialog.Close>
                   </motion.div>
                 </RadixDialog.Content>
