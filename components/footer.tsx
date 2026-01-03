@@ -16,7 +16,7 @@ export function Footer() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
           
           {/* Left Section - Main Heading & CTA */}
-          <div className="lg:col-span-4 space-y-6">
+          <div className="lg:col-span-6 space-y-6">
             <h3 className="text-2xl md:text-3xl font-semibold leading-tight">
               {config.footer.heading}
             </h3>
@@ -36,8 +36,8 @@ export function Footer() {
             </div>
           </div>
 
-          {/* Middle Section - Navigation */}
-          <div className="lg:col-span-2">
+          {/* Right Section - Navigation */}
+          <div className="lg:col-span-2 lg:col-start-11">
             <nav>
               <ul className="flex flex-col gap-3">
                 <li>

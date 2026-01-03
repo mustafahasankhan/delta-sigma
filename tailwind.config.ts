@@ -89,7 +89,7 @@ export default {
         gradientMove: "gradientMove 3s linear infinite",
       },
       backgroundImage: {
-        radialToBr: "radial-gradient(circle at 75% 140%,#545cff 0,transparent 35%)",
+        radialToBr: "radial-gradient(circle at 75% 140%,#f97316 0,transparent 35%)",
       },
       keyframes: {
         gradientMove: {

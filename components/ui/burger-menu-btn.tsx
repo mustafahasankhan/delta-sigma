@@ -29,8 +29,8 @@ export function BurgerMenuBtn({ ref, className, ...props }: HTMLMotionProps<"but
       )}
       {...props}>
       <span ref={scope} className="flex items-center justify-center">
-        <span className="absolute inset-0 -top-[6px] m-auto block h-0.5 w-3.5 origin-center bg-foreground"></span>
-        <span className="absolute inset-0 top-[6px] m-auto block h-0.5 w-3.5 origin-center bg-foreground"></span>
+        <span className="absolute inset-0 -top-[6px] m-auto block h-0.5 w-3.5 origin-center bg-white"></span>
+        <span className="absolute inset-0 top-[6px] m-auto block h-0.5 w-3.5 origin-center bg-white"></span>
       </span>
     </motion.button>
   )

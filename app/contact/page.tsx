@@ -128,15 +128,7 @@ export default function ContactPage() {
                   <Instagram className="w-5 h-5" />
                 </Link>
               )}
-              {siteConfig.social.facebook && siteConfig.social.facebook !== "#" && (
-                <Link
-                  href={siteConfig.social.facebook}
-                  target="_blank"
-                  className="rounded-full p-3 ring-2 ring-foreground transition-all hover:scale-110 hover:ring-primary"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </Link>
-              )}
+              
               <a
                 href={`mailto:${siteConfig.contact.email}`}
                 className="rounded-full p-3 ring-2 ring-foreground transition-all hover:scale-110 hover:ring-primary"

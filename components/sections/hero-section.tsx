@@ -95,19 +95,18 @@ export const HeroSection = () => {
   return (
     <section className="relative min-h-screen overflow-hidden bg-black">
       {/* Video Background */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 flex items-center justify-center bg-black">
         <video
           autoPlay
           muted
           loop
           playsInline
-          className="absolute inset-0 w-full h-full object-cover"
+          className="w-full h-auto md:w-full md:h-full md:object-cover max-h-[70vh] md:max-h-none"
         >
           <source src="/hero.mp4" type="video/mp4" />
         </video>
-        {/* Overlay gradient for better text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent" />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+        {/* Light overlay gradient for text readability - only at bottom */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
       </div>
 
       {/* Content */}

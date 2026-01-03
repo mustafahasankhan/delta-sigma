@@ -74,7 +74,7 @@ function DialogContentCore(
               initial="closed"
               animate="open"
               exit="closed"
-              className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm">
+              className="absolute inset-0 flex items-center justify-center bg-black/20 backdrop-blur-sm pointer-events-auto">
               <RadixDialog.Content forceMount ref={forwardedRef} asChild {...props}>
                 <motion.div
                   variants={dialogVariants}
@@ -82,15 +82,15 @@ function DialogContentCore(
                   animate="open"
                   exit="closed"
                   className={cn(
-                    "relative mx-auto flex max-w-[940px] origin-bottom items-center justify-center",
+                    "relative mx-4 md:mx-auto flex w-full max-w-[940px] origin-bottom items-center justify-center",
                     className
                   )}>
                   <RadixDialog.Title className="hidden">{title}</RadixDialog.Title>
-                  <div className="h-[90dvh] w-[940px] overflow-y-auto rounded-[calc(16px_+_16*(100vw_-_576px)/1024)] bg-foreground text-background [--padding:0_calc(32px_+_48*(100vw_-_576px)/1024)]">
-                    <div className="sticky top-0 flex items-center justify-between bg-inherit p-[--padding] pt-[calc(32px_+_48*(100vw_-_576px)/1024)]">
+                  <div className="h-[85dvh] md:h-[90dvh] w-full max-w-[940px] overflow-y-auto rounded-2xl md:rounded-3xl bg-foreground text-background">
+                    <div className="sticky top-0 flex items-center justify-between bg-inherit px-4 py-4 md:px-12 md:py-8">
                       <TextFadeInByText
                         as="h5"
-                        className="font-base text-[calc(16px_+_8*(100vw_-_576px)/1024)] leading-snug">
+                        className="font-base text-base md:text-xl leading-snug">
                         Navigation
                       </TextFadeInByText>
                       <RadixDialog.Close className="group grid size-10 place-items-center rounded-full bg-[#ffffff26] transition-colors hover:bg-[#ffffff40]">
@@ -98,8 +98,8 @@ function DialogContentCore(
                       </RadixDialog.Close>
                     </div>
 
-                    <div className="p-[--padding]">
-                      <div className="my-[calc(16px_+_24*(100vw_-_576px)/1024)] space-y-4">
+                    <div className="px-4 pb-6 md:px-12 md:pb-12">
+                      <div className="my-4 md:my-8 space-y-3 md:space-y-4">
                         {[
                           { label: "Work", href: "/work" },
                           { label: "About", href: "/about" },
@@ -115,15 +115,15 @@ function DialogContentCore(
                             className="flex items-center gap-4">
                             <AnimatedLink
                               href={menu.href}
-                              className="rounded-none border-0 bg-transparent p-0 text-[calc(32px_+_24*(100vw_-_576px)/1024)] font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
+                              className="rounded-none border-0 bg-transparent p-0 text-3xl md:text-5xl font-semibold outline-none ring-0 hover:bg-transparent hover:ring-0">
                               {menu.label}
                             </AnimatedLink>
                           </motion.div>
                         ))}
                       </div>
 
-                      <div className="mt-8 flex items-center justify-between gap-4 py-4">
-                        <div className="font-base flex flex-wrap gap-x-8 gap-y-2 text-base">
+                      <div className="mt-6 md:mt-8 flex items-center justify-between gap-4 py-4">
+                        <div className="font-base flex flex-wrap gap-x-6 md:gap-x-8 gap-y-2 text-sm md:text-base">
                           <p className="block w-full text-muted">Follow Us</p>
                           {[
                             { href: siteConfig.social.instagram, label: "Instagram" },

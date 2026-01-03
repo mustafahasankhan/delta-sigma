@@ -38,7 +38,7 @@ export default function WorkPage() {
   const handleProjectClick = (project: typeof projects[0]) => {
     const fileType = project.fileType || "image"
     if (fileType === "pdf") {
-      window.open(project.fileUrl || project.image, "_blank")
+      window.open((project as { fileUrl?: string }).fileUrl || project.image, "_blank")
     } else {
       setSelectedProject(project.id)
     }
@@ -169,7 +169,7 @@ export default function WorkPage() {
           <div className="relative w-full h-[80vh]">
             {projects.find((p) => p.id === selectedProject)?.fileType === "video" ? (
               <video
-                src={projects.find((p) => p.id === selectedProject)?.fileUrl || projects.find((p) => p.id === selectedProject)?.image}
+                src={(projects.find((p) => p.id === selectedProject) as { fileUrl?: string; image: string } | undefined)?.fileUrl || projects.find((p) => p.id === selectedProject)?.image}
                 controls
                 className="w-full h-full object-contain rounded-lg"
                 autoPlay
